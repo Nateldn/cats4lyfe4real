@@ -15,6 +15,8 @@ function App() {
 
         <h2>Jamie's ne H2</h2>
 
+        <h2>Nate's here too</h2>
+
         <a
           className="App-link"
           href="https://reactjs.org"
