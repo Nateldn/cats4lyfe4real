@@ -1,33 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import Product_Page from './Product_Page';
+import Header from './Header';
+import Modal from './Modal';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <h1>Zian Javed #codenation</h1>
+const App = () => {
 
-        <h1>Juliaaaaaaaaaaaaaaa</h1>
-
-        <h2>Jamie's ne H2</h2>
-
-        <h2>Nate's here too</h2>
-
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+return(
+    <div>
+        <Header/>
+        <Product_Page/>
+        <Modal />
+        
     </div>
-  );
+)
+
+
 }
 
 export default App;
