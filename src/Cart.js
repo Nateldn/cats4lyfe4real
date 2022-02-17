@@ -1,17 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import './App.scss';
+
+//Get Bootstrap CSS and Offcanvas styles
 import 'bootstrap/dist/css/bootstrap.min.css'
-import {Container, Row, Col, Offcanvas, Button} from 'react-bootstrap';
+import {Offcanvas, Button} from 'react-bootstrap';
 
-
-// const Cart = () => {
-//     return (
-//         <div>Cats4Lyfe - Modal</div>
-//     );
-// }
-
-
-// export default Cart
 
 const Cart = ({ name, ...props }) => {
     const [show, setShow] = useState(false);
@@ -28,9 +21,9 @@ const Cart = ({ name, ...props }) => {
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>Basket</Offcanvas.Title>
           </Offcanvas.Header>
-          {/* This is where we will pull are cat product items - requires to-d */}
           <Offcanvas.Body> 
             {/* This is where we will pull our cat product items - requires to-do list functionality */}
+
           </Offcanvas.Body>
         </Offcanvas>
       </>
