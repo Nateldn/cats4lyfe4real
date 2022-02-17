@@ -12,7 +12,7 @@ return(
     <div>
         <Header/>
         <Product_Page/>
-        {/* <Cart /> */}
+        <Cart />
         
     </div>
 )
