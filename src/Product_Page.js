@@ -37,7 +37,7 @@ const Product_Page = () => {
 
 return (
     <div>
-        <h1>Cats 4 Lyfe</h1>
+        
         <img style={{width: 400, height: 400}} src={catUrl} alt="cat-images"/>
         <button onClick={getCat}>Add to Cart</button>
     </div>
