@@ -1,37 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
-html{
-  background-color: azure;
-}
-.header {
+
+/* Flexboxes for products - Julia */
+.cats {
   display: flex;
-  justify-content: space-around;
-  background-color: #ffe8d6;
+  text-align: center;
+  flex-direction: column;
+  padding: 5px;
+  justify-content: center;
 }
 
-.links {
+.toprow {
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 100px;
+}
+
+.bottomrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.flex {
+  flex-wrap: wrap;
+  width: 256px;
+  height: 256px;
+  background-color: olive;
+  text-align: center;
   
-}
-
-.links p{
-  padding-right: 45px;
-  font-family: 'Bubblegum Sans', cursive;
- color: #cb997e;
- font-size: 25px;
-}
-
-#title {
-  font-family: 'Titan One', cursive;
-  color: #cb997e;
-  font-size: 50px;
-  font-weight: 100;
-}
-
-#logo {
-  margin-top: 25px;
-  width: 60px;
-  height: 60px;
-  box-shadow: 0px 2px rgba(0, 0, 0, 0.205);
+  padding: 5px;
+  margin: 10px;
 }
