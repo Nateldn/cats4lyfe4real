@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react'
 
 
-const url = 'https://api.thecatapi.com/v1/images/search';
-
+const url = 'https://api.thecatapi.com/v1/images/search?limit=8 ';
 
 const Product_Page = () => {
-
 
     const [catUrl, setCatUrl] = useState('');
 
@@ -20,10 +18,9 @@ const Product_Page = () => {
 
         fetch(url)
         .then((res) => res.json())
-        .then((cats) => {
-            console.log('Cats:', cats)
-            const catUrl = cats[0].url;
-
+        .then((cats) => {     
+            const catUrl = cats;
+        
             setCatUrl(catUrl);
         })
         .catch((error) => {
@@ -31,14 +28,11 @@ const Product_Page = () => {
         });
     }
 
-
-
-
-
 return (
     <div>
-        
-        <img style={{width: 400, height: 400}} src={catUrl} alt="cat-images"/>
+        {catUrl.map ((cat, index) => {
+          return  <img key={index} style={{width: 400, height: 400, display:'flex'}} src={cat.url} alt="cat-images"/>})}
+
         <button onClick={getCat}>Add to Cart</button>
     </div>
 )
