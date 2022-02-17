@@ -56,6 +56,7 @@ html{
 .btn-primary:hover {
   background-color: #b7b7a4 !important;
   border-color: #6B705C !important;
+  color: rgb(228, 228, 228);
   transition: all linear 300ms;
 }
 
