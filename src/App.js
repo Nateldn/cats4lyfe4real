@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Product_Page from './Product_Page';
 import Header from './Header';
-import Cart from './Cart';
-import 'bootstrap/dist/css/bootstrap.min.css'
-import {Container, Row, Col} from 'react-bootstrap'; 
+import Slideout from './Slideout';
+import Basket from './Basket';
+// import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 
 const App = () => {
@@ -12,7 +13,8 @@ return(
     <div>
         <Header/>
         <Product_Page/>
-        <Cart />
+        <Slideout />
+        {/* <Basket /> */}
         
     </div>
 )
