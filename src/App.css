@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
 
+/* Universal */
 *, *:before, *:after{
   box-sizing: border-box;
  }
 
-
-
-
-html{
+ html{
   background-color: azure;
+/*-========== Zian Styles =========*/
+
+
 }
 .header {
   display: flex;
@@ -54,6 +55,39 @@ html{
   width: 60px;
   height: 60px;
   box-shadow: 0px 2px rgba(0, 0, 0, 0.205);
+}
+
+/*============== Flexboxes for products - Julia =========== */
+.cats {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 5px;
+  justify-content: center;
+}
+
+.toprow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 100px;
+}
+
+.bottomrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.flex {
+  flex-wrap: wrap;
+  width: 256px;
+  height: 256px;
+  background-color: olive;
+  text-align: center;
+  
+  padding: 5px;
+  margin: 10px;
 }
 
 
