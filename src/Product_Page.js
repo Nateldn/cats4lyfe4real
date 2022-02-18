@@ -16,9 +16,9 @@ const Product_Page = () => {
     const getCat = () => {
         console.log("hello")
 
-        fetch(url)
+         fetch(url)
         .then((res) => res.json())
-        .then((cats) => {     
+        .then((cats) => { 
             const catUrl = cats;
         
             setCatUrl(catUrl);
@@ -29,14 +29,21 @@ const Product_Page = () => {
     }
 
 return (
-    <div>
-        {catUrl.map ((cat, index) => {
-          return  <img key={index} style={{width: 400, height: 400, display:'flex'}} src={cat.url} alt="cat-images"/>})}
-
-        <button onClick={getCat}>Add to Cart</button>
+    <div> {catUrl &&
+        catUrl.map ((cat, index) => {
+            return  (
+            <>
+            <img key={index} style={{width: 400, height: 400, display:'flex'}} src={cat.url} alt="cat-images"/>
+            <button onClick={getCat}>Add to Cart</button>
+            </>
+            )
+        }
+        )
+}
     </div>
 )
-
 }
+
+
 
 export default Product_Page;
