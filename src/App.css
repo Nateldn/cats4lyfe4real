@@ -91,6 +91,45 @@
 }
 
 
+.catShop {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: space-between;
+  height: 100%;
+  
+}
+
+.catIndividual {
+  display: flex;
+  flex-flow: column wrap;
+  /* flex-wrap: wrap; */
+  max-width: 100%;
+  max-height: 50%;
+  padding: 10px;
+  justify-content: center;
+}
+
+.catIndividual img {
+  display: block;
+  object-fit: cover; 
+  /* this is to avoid the image distortion */
+  max-width: 256px;
+  max-height: 256px;
+  width: auto;
+  height: auto;
+  
+}
+.catIndividual button {
+  max-width: 256px;
+  
+}
+
+
+
+
+
+
 
 /*========== NKXXX Styles ============*/
 
