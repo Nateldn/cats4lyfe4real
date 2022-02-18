@@ -15,14 +15,22 @@ const Basket = () => {
     const [cost, setCost] = useState(""); // used to calculate total price
 
     const addCartItem = (cartItem) => {
-        if (cats){
-            return; // if it's a cat item the return it
+        if (cats || cats.url){
+            return; // if it's a cat item then return it
         }
         // add cat item to array
         const newCartItems = [cartItem, ...cartItems];
         setCartItem(newCartItems);
         console.log(...cartItems);
     };
+
+   const removeCartItem = () => { // remove items from the basket
+
+
+    setCartItem()
+   }
+
+
     return (
         <div> 
     
