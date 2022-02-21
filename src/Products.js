@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 // import 'bootstrap/dist/css/bootstrap.min.css'
-import { Offcanvas, Button } from "react-bootstrap";
+// import { Offcanvas, Button } from "react-bootstrap";
+import Header from "./Header";
 
 const Products = () => {
   // NKXXX
@@ -14,6 +15,7 @@ const Products = () => {
     setShow(true);
   };
 
+// This part is the API - getting the images.//
   useEffect(() => {
     getCat();
   }, []);
@@ -32,12 +34,7 @@ const Products = () => {
         console.log("Error:", error);
       });
   };
-
-  // Here we set the variables that we'll use in the basket
-  const itemPrice = 0;
-  const shippingPrice = 100;
-  const vat = itemPrice * 0.2;
-  const totalPrice = itemPrice + vat + shippingPrice;
+  
 
   const addCartItem = (cartItem) => {
     // if (cats || catsUrl){
@@ -49,10 +46,10 @@ const Products = () => {
     setCartItem(newCartItems);
   };
 
-  const removeCartItem = (id) => {
+  const removeCartItem = (cartItem) => {
     // remove items from the basket
-    let newArry = [...catUrl];
-    newArry.splice(id, 1);
+    let newArry = [...cartItems];
+    newArry.splice(cartItem, 1);
     setCartItem(newArry);
   };
 
@@ -101,7 +98,7 @@ const Cats = ({ catUrl, handleShow, slideout, show, addCartItem }) => {
                 src={cat.url}
                 alt="cat-images"
               />
-              <button onClick={() => addCartItem(cat)}>add</button>
+              <button onClick={() => addCartItem(cat)}>add to basket</button>
               </div>
             </>
           );
@@ -118,9 +115,10 @@ const Basket = ({ cartItems, show, handleClose, removeCartItem }) => {
       <div className="button_wrap">
         {cartItems.map((cat, index) => {
           return (
-            <>
-              <img src={cat.url} alt="" />
-              <button onClick={() => removeCartItem(index)}>remove</button>
+            <> 
+            {/* //Displays images for the basket */}
+              <img key={index} src={cat.url} alt="" style={{ width: 250, height: 250, display: "flex" }} />
+              <button onClick={() => removeCartItem(index)}>Remove Item</button>
             </>
           );
         })}

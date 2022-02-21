@@ -1,6 +1,6 @@
 import React from 'react'
 import "./App.css"
-// import logo from './images/cat_logo.png'
+import Add from './Add'
 import logo2 from './images/scratch-cat.svg'
 
 
@@ -12,10 +12,14 @@ const Header = () =>{
             <div className='links'>
                 <p><a href="#/">Home</a></p>
                 <p><a href="#/">Products</a></p>
-                <p><a href="#/">Basket </a></p>
+                <Add/>
             </div>
         </div>
     )
+
+
+
+    
 }
 
 export default Header
